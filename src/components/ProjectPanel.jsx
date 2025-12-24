@@ -7,6 +7,22 @@ function ProjectPanel() {
   const { darkMode } = useDarkMode();
   const Projects = [
     {
+      title: "Full-Stack Blogging Platform",
+      description:
+        "A full-stack blogging platform that allows users to create, edit, and manage blogs with secure authentication, rich text editing, image uploads, and an interactive commenting system.",
+      live: "https://blogs-w49k.onrender.com/", // replace with actual link
+      image: "/blogs.png", // replace with your project image
+      tags: [
+        "React.js",
+        "Vite",
+        "Node.js",
+        "JWT Authentication",
+        "Cloudinary",
+        "Tailwind CSS",
+      ],
+    },
+
+    {
       title: "Restaurant Reservation System",
       description:
         "A full-stack restaurant management platform enabling users to browse menus, make reservations, and manage bookings through a secure and scalable web application.",
@@ -74,8 +90,6 @@ function ProjectPanel() {
         "Web Application",
       ],
     },
-    
-    
   ];
 
   return (
