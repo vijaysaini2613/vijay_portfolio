@@ -11,6 +11,7 @@ function ProjectPanel() {
       description:
         "A full-stack blogging platform that allows users to create, edit, and manage blogs with secure authentication, rich text editing, image uploads, and an interactive commenting system.",
       live: "https://blogs-w49k.onrender.com/", // replace with actual link
+      code: "https://github.com/vijaysaini2613/Blogs",
       image: "/blogs.png", // replace with your project image
       tags: [
         "React.js",
@@ -27,6 +28,7 @@ function ProjectPanel() {
       description:
         "A full-stack restaurant management platform enabling users to browse menus, make reservations, and manage bookings through a secure and scalable web application.",
       live: "https://sizzlers-restaurant.vercel.app/",
+      code: "https://github.com/vijaysaini2613/SIZZLERS_RESTAURANT",
       image: "/sizzlers.png",
       tags: [
         "React.js",
@@ -41,6 +43,7 @@ function ProjectPanel() {
       description:
         "A full-stack AI-driven finance platform enabling secure authentication, financial data management, transaction workflows, and event-driven automation with a scalable, production-ready architecture.",
       live: "https://welth-fawn.vercel.app/",
+      code: "https://github.com/vijaysaini2613/welth",
       image: "/welth.png",
       tags: [
         "Next.js",
@@ -57,6 +60,7 @@ function ProjectPanel() {
       description:
         "A responsive static business website designed to showcase company information, services, and branding with a clean UI and optimized user experience.",
       live: "https://pspl.vercel.app/",
+      code: "https://github.com/vijaysaini2613/PSPL",
       image: "/pspl.png",
       tags: ["HTML", "CSS", "JavaScript", "Responsive Design", "UI/UX"],
     },
@@ -65,6 +69,7 @@ function ProjectPanel() {
       description:
         "A dynamic travel and tour booking website built with JavaScript, allowing users to explore destinations, view tour packages, and interact with travel content through an engaging and responsive interface.",
       live: "https://travel-tour-opal.vercel.app/",
+      code: "https://github.com/vijaysaini2613/travel_tour",
       image: "/travel.png",
       tags: [
         "JavaScript",
@@ -80,6 +85,7 @@ function ProjectPanel() {
       description:
         "A PHP-based web application designed to manage and track organizational movements and activities, providing dynamic content rendering, form handling, and structured data management through a server-side architecture.",
       live: "https://monuments-web.vercel.app/",
+      code: "https://github.com/vijaysaini2613/monuments_web",
       image: "/moments.png",
       tags: [
         "PHP",
@@ -191,7 +197,8 @@ const ProjectCard = ({ project, darkMode }) => {
         </p>
 
         {/* Action buttons */}
-        <div className="flex justify-between items-center">
+        <div className="flex gap-4 items-center">
+          {/* Live Button */}
           <a
             href={project.live}
             target="_blank"
@@ -205,6 +212,22 @@ const ProjectCard = ({ project, darkMode }) => {
               style={{ filter: darkMode ? "invert(1)" : "none" }}
             />
             <span>View Live</span>
+          </a>
+
+          {/* Code Button */}
+          <a
+            href={project.code}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            <img
+              src={WebsiteIcom}
+              alt="View Code"
+              className="w-5 h-5"
+              style={{ filter: darkMode ? "invert(1)" : "none" }}
+            />
+            <span>View Code</span>
           </a>
         </div>
       </div>
